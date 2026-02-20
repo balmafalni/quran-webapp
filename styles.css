@@ -218,3 +218,31 @@ aside.plan {
   background: #0f172a; /* solid dark navy */
   border: 1px solid rgba(255,255,255,0.12);
 }
+
+/* ✅ Mobile plan popup: allow scrolling inside the panel */
+@media (max-width: 1050px){
+  aside.plan{
+    position: fixed;
+    inset: 74px 16px 16px 16px;
+    z-index: 20;
+
+    /* key: create a flex column so header stays + body scrolls */
+    display: none;
+    flex-direction: column;
+
+    /* key: make panel itself not fight scrolling */
+    overflow: hidden;
+  }
+
+  aside.plan.open{
+    display: flex; /* not block */
+  }
+
+  /* key: make the body area scrollable */
+  aside.plan .card-bd{
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+    flex: 1; /* fill remaining space under header */
+    min-height: 0; /* important for flex+overflow on iOS */
+  }
+}
