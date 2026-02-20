@@ -212,3 +212,9 @@ input:focus, select:focus{border-color: rgba(96,165,250,.7); box-shadow: 0 0 0 4
   aside.plan{position: fixed; inset: 74px 16px 16px 16px; z-index: 20; display:none}
   aside.plan.open{display:block}
 }
+
+/* Make Plan section solid background */
+aside.plan {
+  background: #0f172a; /* solid dark navy */
+  border: 1px solid rgba(255,255,255,0.12);
+}
