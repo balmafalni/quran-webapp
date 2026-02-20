@@ -1,0 +1,12 @@
+{
+  "name": "quran-webapp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:text": "node ./scripts/build-tanzil-simple-json.mjs",
+    "build:map": "node ./scripts/build-page-map.mjs",
+    "build:pages": "node ./scripts/build-pages-simple.mjs",
+    "build:all": "npm run build:text && npm run build:map && npm run build:pages",
+    "serve": "npx serve . -l 5173"
+  }
+}
